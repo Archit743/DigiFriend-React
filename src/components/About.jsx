@@ -9,7 +9,7 @@ export default function about(){
               </div>
               <div class="bar">
                 <div>
-                  <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Search..." aria-label="Search"/>
+                  <input type="search" class="form-control form-control-dark text-bg-light" placeholder="   Post your query here..." aria-label="Search"/>
                 </div>
               </div>
             </div>

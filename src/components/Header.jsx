@@ -1,5 +1,6 @@
 // src/components/Header.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
@@ -11,10 +12,10 @@ const Header = () => {
         </a>
       </div>
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/" className="nav-link px-2">Home</a></li>
-        <li><a href="/domains" className="nav-link px-2">Domains</a></li>
-        <li><a href="/videos" className="nav-link px-2">Videos</a></li>
-        <li><a href="/more" className="nav-link px-2">More</a></li>
+      <li><Link to="/" className="nav-link px-2">Home</Link></li>
+        <li><Link to="/domains" className="nav-link px-2">Domains</Link></li>
+        <li><Link to="/videos" className="nav-link px-2">Videos</Link></li>
+        <li><Link to="/admin" className="nav-link px-2">Admin</Link></li>
       </ul>
       <div className="col-md-3 text-end">
         <button type="button" className="btn btn-outline-primary me-2">Login</button>

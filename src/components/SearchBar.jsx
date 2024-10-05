@@ -51,7 +51,7 @@ function SearchBar() {
           onChange={handleChange}
         />
         <button>
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <a href="#"><FaSearch size={16} /></a>
         </button>
       </div>
       <div className="result-box">
