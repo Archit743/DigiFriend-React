@@ -1,9 +1,13 @@
 // src/components/Header.js
-import React from 'react';
+import LogIn from './LogIn';
+import Register from './Register';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
   return (
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div className="col-md-3 mb-2 mb-md-0">
@@ -18,9 +22,11 @@ const Header = () => {
         <li><Link to="/admin" className="nav-link px-2">Admin</Link></li>
       </ul>
       <div className="col-md-3 text-end">
-        <button type="button" className="btn btn-outline-primary me-2">Login</button>
-        <button type="button" className="btn btn-primary">Sign-up</button>
+        <button type="button" className="btn btn-outline-primary me-2" onClick={() => setOpen(true)}>Login</button>
+        <button type="button" className="btn btn-primary" onClick={() => setOpen2(true)}>Register</button>
       </div>
+      {open && <LogIn setOpen = {setOpen}/>}
+    {open2 && <Register setOpen={setOpen} setOpen2 = {setOpen2}/>} 
     </header>
   );
 };
