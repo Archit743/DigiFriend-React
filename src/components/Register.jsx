@@ -3,17 +3,19 @@ import '../Styles/Register.css';
 import { useNavigate } from 'react-router-dom';
 
 const Register_user = async (setOpen,setOpen2) => { 
-    const name = document.getElementById("name_input").value;
+    const first_name = document.getElementById("fname_input").value;
+    const last_name = document.getElementById("lname_input").value;
     const email = document.getElementById("email_input").value;
     const password = document.getElementById("password_input").value;
     const loginData = {
-        name: name,
+        firstName: first_name,
+        lastName: last_name,
         email: email,
         password: password,
     };
   
     try {
-        const response = await fetch('https://bandartype-backend.onrender.com/api/user/signup', {
+        const response = await fetch('https://digi-friend-backend-v1.onrender.com/api/user/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +49,10 @@ const Register = ({ setOpen,setOpen2 }) => {
                 <h1 className="register-Title">Register</h1>
                 <div className="register-Details">
                     <div className="register-InputContainer">
-                        <input className="register-Input" type="text" placeholder="Enter your Name" id='name_input' />
+                        <input className="register-Input" type="text" placeholder="Enter your First Name" id='fname_input' />
+                    </div>
+                    <div className="register-InputContainer">
+                        <input className="register-Input" type="text" placeholder="Enter your Last Name" id='lname_input' />
                     </div>
                     <div className="register-InputContainer">
                         <input className="register-Input" type="text" placeholder="Enter your email ID" id='email_input' />
